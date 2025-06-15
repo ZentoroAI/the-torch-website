@@ -88,7 +88,7 @@ export const Footer = () => {
             <h3 className="font-semibold text-foreground">Get in Touch</h3>
             <div className="space-y-2">
               <a 
-                href="mailto:contact@zentoro.com" 
+                href="mailto:zentoro@garudexlabs.com" 
                 className="flex items-center space-x-2 text-sm text-muted-foreground hover:text-green-400 transition-colors group"
               >
                 <Mail className="h-4 w-4 group-hover:text-green-400" />

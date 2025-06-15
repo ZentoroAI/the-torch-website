@@ -105,15 +105,9 @@ export const Footer = () => {
         
         <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
           <div className="text-sm text-muted-foreground">
-            © 2024 The Torch by Zentoro. All rights reserved.
+            © 2025 The Torch by Zentoro. All rights reserved.
           </div>
           <div className="flex items-center space-x-6 text-sm text-muted-foreground">
-            <a href="#privacy" className="hover:text-green-400 transition-colors">
-              Privacy Policy
-            </a>
-            <a href="#terms" className="hover:text-green-400 transition-colors">
-              Terms of Service
-            </a>
             <span className="flex items-center space-x-1">
               <span>Built with</span>
               <span className="text-green-400">⚡</span>

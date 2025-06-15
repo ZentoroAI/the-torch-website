@@ -3,27 +3,27 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Futuristic design system with black, white, and green */
+/* Modern design system with improved aesthetics */
 
 @layer base {
   :root {
-    --background: 0 0% 98%;
-    --foreground: 0 0% 8%;
+    --background: 0 0% 99%;
+    --foreground: 0 0% 3%;
 
     --card: 0 0% 100%;
-    --card-foreground: 0 0% 8%;
+    --card-foreground: 0 0% 3%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 8%;
+    --popover-foreground: 0 0% 3%;
 
     --primary: 142 84% 25%;
     --primary-foreground: 0 0% 98%;
 
-    --secondary: 0 0% 94%;
-    --secondary-foreground: 0 0% 8%;
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 3%;
 
-    --muted: 0 0% 94%;
-    --muted-foreground: 0 0% 35%;
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
 
     --accent: 142 84% 25%;
     --accent-foreground: 0 0% 98%;
@@ -31,39 +31,39 @@
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 0 0% 85%;
-    --input: 0 0% 85%;
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
     --ring: 142 84% 25%;
 
-    --radius: 0.75rem;
+    --radius: 1rem;
 
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 0 0% 8%;
+    --sidebar-background: 0 0% 99%;
+    --sidebar-foreground: 0 0% 3%;
     --sidebar-primary: 142 84% 25%;
     --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 0 0% 94%;
-    --sidebar-accent-foreground: 0 0% 8%;
-    --sidebar-border: 0 0% 85%;
+    --sidebar-accent: 0 0% 96%;
+    --sidebar-accent-foreground: 0 0% 3%;
+    --sidebar-border: 0 0% 90%;
     --sidebar-ring: 142 84% 25%;
   }
 
   .dark {
-    --background: 0 0% 3%;
+    --background: 0 0% 1%;
     --foreground: 0 0% 98%;
 
-    --card: 0 0% 5%;
+    --card: 0 0% 2%;
     --card-foreground: 0 0% 98%;
 
-    --popover: 0 0% 5%;
+    --popover: 0 0% 2%;
     --popover-foreground: 0 0% 98%;
 
     --primary: 142 76% 36%;
     --primary-foreground: 0 0% 98%;
 
-    --secondary: 0 0% 8%;
+    --secondary: 0 0% 5%;
     --secondary-foreground: 0 0% 98%;
 
-    --muted: 0 0% 8%;
+    --muted: 0 0% 5%;
     --muted-foreground: 0 0% 65%;
 
     --accent: 142 76% 36%;
@@ -72,17 +72,17 @@
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 0 0% 12%;
-    --input: 0 0% 12%;
+    --border: 0 0% 8%;
+    --input: 0 0% 8%;
     --ring: 142 76% 36%;
 
-    --sidebar-background: 0 0% 3%;
+    --sidebar-background: 0 0% 1%;
     --sidebar-foreground: 0 0% 98%;
     --sidebar-primary: 142 76% 36%;
     --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 0 0% 8%;
+    --sidebar-accent: 0 0% 5%;
     --sidebar-accent-foreground: 0 0% 98%;
-    --sidebar-border: 0 0% 12%;
+    --sidebar-border: 0 0% 8%;
     --sidebar-ring: 142 76% 36%;
   }
 }
@@ -95,36 +95,106 @@
   body {
     @apply bg-background text-foreground;
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    letter-spacing: -0.025em;
+  }
+
+  h1 {
+    @apply text-5xl md:text-7xl leading-[0.9];
+  }
+
+  h2 {
+    @apply text-4xl md:text-5xl leading-[0.95];
+  }
+
+  h3 {
+    @apply text-2xl md:text-3xl leading-tight;
   }
 }
 
-/* Futuristic glowing effects */
+/* Modern glassmorphism and visual effects */
 @layer components {
+  .glass {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .glass-strong {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(24px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+  }
+
+  .light .glass {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+  }
+
+  .light .glass-strong {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(24px);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+  }
+
   .glow-green {
-    box-shadow: 0 0 20px rgba(34, 197, 94, 0.3);
+    box-shadow: 0 0 40px rgba(34, 197, 94, 0.15), 0 0 80px rgba(34, 197, 94, 0.05);
   }
   
   .glow-green-strong {
-    box-shadow: 0 0 30px rgba(34, 197, 94, 0.5);
+    box-shadow: 0 0 50px rgba(34, 197, 94, 0.25), 0 0 100px rgba(34, 197, 94, 0.1);
   }
   
   .border-glow {
     border: 1px solid rgba(34, 197, 94, 0.3);
-    box-shadow: 0 0 10px rgba(34, 197, 94, 0.1);
+    box-shadow: 0 0 20px rgba(34, 197, 94, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.1);
   }
   
   .futuristic-grid {
     background-image: 
-      linear-gradient(rgba(34, 197, 94, 0.1) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(34, 197, 94, 0.1) 1px, transparent 1px);
-    background-size: 50px 50px;
+      radial-gradient(circle at 1px 1px, rgba(34, 197, 94, 0.15) 1px, transparent 0);
+    background-size: 40px 40px;
   }
 
-  /* Light theme specific styles */
-  .light .futuristic-grid {
-    background-image: 
-      linear-gradient(rgba(22, 101, 52, 0.2) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(22, 101, 52, 0.2) 1px, transparent 1px);
+  .gradient-mesh {
+    background: 
+      radial-gradient(circle at 20% 80%, rgba(34, 197, 94, 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, rgba(34, 197, 94, 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 40% 40%, rgba(34, 197, 94, 0.05) 0%, transparent 50%);
+  }
+
+  /* Enhanced hover effects */
+  .hover-lift {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  }
+
+  .hover-glow:hover {
+    box-shadow: 0 0 30px rgba(34, 197, 94, 0.3);
+  }
+
+  /* Refined animations */
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-fade-up {
+    animation: fade-up 0.6s ease-out;
+  }
+
+  .animate-scale-in {
+    animation: scale-in 0.4s ease-out;
   }
 
   /* Light theme green colors */
@@ -168,17 +238,50 @@
     background-color: rgba(22, 101, 52, 0.05) !important;
   }
 
-  /* Light theme glow effects with dark green */
+  /* Light theme glow effects */
   .light .glow-green {
-    box-shadow: 0 0 20px rgba(22, 101, 52, 0.2);
+    box-shadow: 0 0 40px rgba(22, 101, 52, 0.12), 0 0 80px rgba(22, 101, 52, 0.04);
   }
   
   .light .glow-green-strong {
-    box-shadow: 0 0 30px rgba(22, 101, 52, 0.3);
+    box-shadow: 0 0 50px rgba(22, 101, 52, 0.2), 0 0 100px rgba(22, 101, 52, 0.08);
   }
   
   .light .border-glow {
     border: 1px solid rgba(22, 101, 52, 0.3);
-    box-shadow: 0 0 10px rgba(22, 101, 52, 0.1);
+    box-shadow: 0 0 20px rgba(22, 101, 52, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.5);
+  }
+
+  .light .futuristic-grid {
+    background-image: 
+      radial-gradient(circle at 1px 1px, rgba(22, 101, 52, 0.12) 1px, transparent 0);
+  }
+}
+
+/* Keyframe animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
   }
 }

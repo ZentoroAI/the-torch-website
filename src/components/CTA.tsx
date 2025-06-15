@@ -2,50 +2,60 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
-import { Github, Zap } from 'lucide-react';
+import { Github, Zap, Rocket } from 'lucide-react';
 
 export const CTA = () => {
   return (
-    <section className="py-24 bg-background relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-green-500/10 via-transparent to-green-500/5"></div>
+    <section className="py-32 bg-background relative overflow-hidden">
+      <div className="absolute inset-0 gradient-mesh"></div>
       
       <div className="container mx-auto px-4 relative z-10">
-        <Card className="max-w-5xl mx-auto bg-card backdrop-blur-sm border-green-500/30 p-12 md:p-16 text-center glow-green">
-          <div className="space-y-8">
-            <div className="p-4 bg-green-500/10 rounded-full w-fit mx-auto border border-green-500/20 glow-green">
-              <Zap className="h-12 w-12 text-green-500" />
+        <Card className="max-w-6xl mx-auto glass-strong border-green-500/30 p-16 md:p-20 text-center glow-green-strong rounded-3xl">
+          <div className="space-y-12">
+            <div className="relative">
+              <div className="p-6 bg-gradient-to-br from-green-500 to-green-600 rounded-3xl w-fit mx-auto border border-green-500/20 glow-green-strong shadow-2xl">
+                <Rocket className="h-16 w-16 text-white" />
+              </div>
+              <div className="absolute inset-0 bg-green-500/20 blur-3xl rounded-full scale-150"></div>
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-foreground via-green-400 to-foreground bg-clip-text text-transparent">
-              Ready to Join <span className="text-green-500">The Torch</span>?
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-10 leading-relaxed">
+            
+            <div className="space-y-6">
+              <h2 className="font-bold bg-gradient-to-r from-foreground via-green-400 to-foreground bg-clip-text text-transparent">
+                Ready to Join <span className="text-green-500">The Torch</span>?
+              </h2>
+              <div className="w-32 h-1 bg-gradient-to-r from-green-400 to-green-600 mx-auto rounded-full"></div>
+            </div>
+            
+            <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
               Connect with founders, builders, and startup-minded people from around the world. 
               Let's rise together in this free, open community.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+            <div className="flex flex-col sm:flex-row gap-8 justify-center items-center pt-8">
               <Button 
                 size="lg" 
-                className="bg-green-500 hover:bg-green-600 text-black px-10 py-4 text-xl font-semibold rounded-xl glow-green hover:glow-green-strong transition-all duration-300 hover:scale-105 border-0"
+                className="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-black px-12 py-6 text-xl font-semibold rounded-2xl glow-green-strong hover:glow-green-strong transition-all duration-500 hover:scale-110 border-0 shadow-2xl"
                 onClick={() => window.open('https://discord.gg/NucXxTb9H3', '_blank')}
               >
-                <Zap className="mr-2 h-5 w-5" />
+                <Zap className="mr-3 h-6 w-6" />
                 Join Discord Community
               </Button>
               
               <Button 
                 variant="outline" 
                 size="lg"
-                className="border-green-500/50 text-green-400 hover:bg-green-500/10 hover:border-green-400 px-10 py-4 text-xl rounded-xl backdrop-blur-sm border-glow hover:glow-green transition-all duration-300"
+                className="glass border-green-500/50 text-green-400 hover:bg-green-500/10 hover:border-green-400 px-12 py-6 text-xl rounded-2xl border-glow hover:glow-green transition-all duration-500 hover:scale-105"
                 onClick={() => window.open('https://github.com/ZentoroAI/the-torch-website', '_blank')}
               >
-                <Github className="mr-2 h-5 w-5" />
+                <Github className="mr-3 h-6 w-6" />
                 Contribute to Code
               </Button>
             </div>
             
-            <div className="pt-8 text-base text-muted-foreground">
-              <p>Join 100+ startup founders already building together</p>
+            <div className="pt-12 glass rounded-2xl p-8 border border-green-500/20 max-w-md mx-auto">
+              <p className="text-lg text-muted-foreground font-medium">
+                Join 100+ startup founders already building together
+              </p>
             </div>
           </div>
         </Card>

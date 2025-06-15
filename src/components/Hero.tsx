@@ -10,6 +10,7 @@ export const Hero = () => {
       <div className="absolute inset-0 futuristic-grid opacity-50"></div>
       
       <div className="container mx-auto px-4 text-center relative z-10">
+        <br/>
         <div className="max-w-6xl mx-auto space-y-12 animate-fade-up">
           <div className="inline-flex items-center space-x-3 glass-strong rounded-full px-8 py-4 text-green-400 text-sm font-medium border-glow animate-float">
             <Sparkles className="h-4 w-4" />

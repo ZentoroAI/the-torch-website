@@ -5,12 +5,12 @@ import { ArrowDown, Zap, Globe, DollarSign } from 'lucide-react';
 
 export const Hero = () => {
   return (
-    <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-emerald-950 via-background to-emerald-900/20 relative overflow-hidden">
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%2310b981%22%20fill-opacity%3D%220.02%22%3E%3Cpath%20d%3D%22m36%2034v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6%2034v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6%204V0H4v4H0v2h4v4h2V6h4V4H6z%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
+    <section className="min-h-screen flex items-center justify-center bg-black relative overflow-hidden futuristic-grid">
+      <div className="absolute inset-0 bg-gradient-to-br from-green-500/5 via-transparent to-green-500/10"></div>
       
       <div className="container mx-auto px-4 text-center relative z-10">
         <div className="max-w-5xl mx-auto space-y-10 animate-fade-in">
-          <div className="inline-flex items-center space-x-2 bg-emerald-500/10 border border-emerald-500/20 rounded-full px-6 py-3 text-emerald-400 text-sm font-medium backdrop-blur-sm">
+          <div className="inline-flex items-center space-x-2 bg-green-500/10 border border-green-500/30 rounded-full px-6 py-3 text-green-400 text-sm font-medium backdrop-blur-sm border-glow">
             <Zap className="h-4 w-4" />
             <span>Free & Open Global Community</span>
           </div>
@@ -20,16 +20,16 @@ export const Hero = () => {
               <img 
                 src="/lovable-uploads/935aa5de-a24f-4645-a988-5f156502dd1e.png" 
                 alt="The Torch by Zentoro" 
-                className="h-32 md:h-40 w-auto"
+                className="h-32 md:h-40 w-auto filter drop-shadow-[0_0_30px_rgba(34,197,94,0.3)]"
               />
             </div>
             
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-emerald-400 via-emerald-300 to-emerald-500 bg-clip-text text-transparent leading-tight">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-white via-green-400 to-white bg-clip-text text-transparent leading-tight">
               Join The Movement
             </h1>
           </div>
           
-          <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed font-light">
+          <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed font-light">
             A global Discord community for founders, builders, and startup-minded people. 
             Build in public, collaborate, and grow together in our free, open ecosystem.
           </p>
@@ -37,7 +37,7 @@ export const Hero = () => {
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center pt-6">
             <Button 
               size="lg" 
-              className="bg-emerald-600 hover:bg-emerald-700 text-white px-10 py-4 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 border-0"
+              className="bg-green-500 hover:bg-green-600 text-black px-10 py-4 text-lg font-semibold rounded-xl glow-green hover:glow-green-strong transition-all duration-300 hover:scale-105 border-0"
               onClick={() => window.open('https://discord.gg/NucXxTb9H3', '_blank')}
             >
               <Zap className="mr-2 h-5 w-5" />
@@ -47,7 +47,7 @@ export const Hero = () => {
             <Button 
               variant="outline" 
               size="lg"
-              className="border-emerald-500/30 text-emerald-400 hover:bg-emerald-500/10 hover:border-emerald-400/50 px-10 py-4 text-lg rounded-xl backdrop-blur-sm"
+              className="border-green-500/50 text-green-400 hover:bg-green-500/10 hover:border-green-400 px-10 py-4 text-lg rounded-xl backdrop-blur-sm border-glow hover:glow-green transition-all duration-300"
               onClick={() => document.getElementById('features')?.scrollIntoView({ behavior: 'smooth' })}
             >
               Learn More
@@ -56,17 +56,17 @@ export const Hero = () => {
           </div>
           
           <div className="pt-8 grid grid-cols-1 md:grid-cols-3 gap-6 max-w-2xl mx-auto text-sm">
-            <div className="flex items-center justify-center space-x-3 p-4 rounded-lg bg-emerald-500/5 border border-emerald-500/10">
-              <div className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></div>
-              <span className="text-muted-foreground">Live Discord Community</span>
+            <div className="flex items-center justify-center space-x-3 p-4 rounded-lg bg-green-500/5 border border-green-500/20 border-glow">
+              <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse glow-green"></div>
+              <span className="text-gray-300">Live Discord Community</span>
             </div>
-            <div className="flex items-center justify-center space-x-3 p-4 rounded-lg bg-emerald-500/5 border border-emerald-500/10">
-              <Globe className="h-4 w-4 text-emerald-500" />
-              <span className="text-muted-foreground">Global Network</span>
+            <div className="flex items-center justify-center space-x-3 p-4 rounded-lg bg-green-500/5 border border-green-500/20 border-glow">
+              <Globe className="h-4 w-4 text-green-500" />
+              <span className="text-gray-300">Global Network</span>
             </div>
-            <div className="flex items-center justify-center space-x-3 p-4 rounded-lg bg-emerald-500/5 border border-emerald-500/10">
-              <DollarSign className="h-4 w-4 text-emerald-500" />
-              <span className="text-muted-foreground">100% Free</span>
+            <div className="flex items-center justify-center space-x-3 p-4 rounded-lg bg-green-500/5 border border-green-500/20 border-glow">
+              <DollarSign className="h-4 w-4 text-green-500" />
+              <span className="text-gray-300">100% Free</span>
             </div>
           </div>
         </div>

@@ -25,37 +25,37 @@ const testimonials = [
 
 export const Testimonials = () => {
   return (
-    <section className="py-20 bg-muted/30">
+    <section className="py-24 bg-gradient-to-b from-emerald-50/50 to-background dark:from-emerald-950/20 dark:to-background">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center space-x-2 bg-green-500/10 border border-green-500/20 rounded-full px-4 py-2 text-green-400 text-sm font-medium mb-4">
+        <div className="text-center mb-20">
+          <div className="inline-flex items-center space-x-2 bg-emerald-500/10 border border-emerald-500/20 rounded-full px-6 py-3 text-emerald-400 text-sm font-medium mb-6 backdrop-blur-sm">
             <span>💬</span>
             <span>From Our Team</span>
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Why We Built <span className="text-green-400">The Torch</span>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            Why We Built <span className="text-emerald-500">The Torch</span>
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Hear from the Zentoro team about the vision behind this community
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {testimonials.map((testimonial, index) => (
             <Card 
               key={testimonial.name}
-              className="bg-card/50 backdrop-blur border-green-500/20 hover:border-green-500/40 transition-all duration-300 hover:scale-105"
+              className="bg-background/80 backdrop-blur-sm border-emerald-500/20 hover:border-emerald-500/40 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
               style={{ animationDelay: `${index * 200}ms` }}
             >
-              <CardContent className="p-6">
-                <div className="flex items-center space-x-3 mb-4">
-                  <div className="text-2xl">{testimonial.avatar}</div>
+              <CardContent className="p-8">
+                <div className="flex items-center space-x-4 mb-6">
+                  <div className="text-3xl">{testimonial.avatar}</div>
                   <div>
-                    <div className="font-semibold text-foreground">{testimonial.name}</div>
-                    <div className="text-sm text-green-400">{testimonial.role}</div>
+                    <div className="font-semibold text-foreground text-lg">{testimonial.name}</div>
+                    <div className="text-emerald-500 font-medium">{testimonial.role}</div>
                   </div>
                 </div>
-                <p className="text-muted-foreground leading-relaxed italic">
+                <p className="text-muted-foreground leading-relaxed italic text-base">
                   "{testimonial.content}"
                 </p>
               </CardContent>

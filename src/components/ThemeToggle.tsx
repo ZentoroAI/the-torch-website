@@ -28,7 +28,7 @@ export const ThemeToggle = () => {
       variant="outline"
       size="icon"
       onClick={toggleTheme}
-      className="rounded-full bg-background/80 backdrop-blur border-green-500/20 hover:border-green-500/40"
+      className="rounded-xl bg-background/80 backdrop-blur-sm border-emerald-500/20 hover:border-emerald-500/40 hover:bg-emerald-500/10"
     >
       {theme === 'dark' ? '☀️' : '🌙'}
     </Button>

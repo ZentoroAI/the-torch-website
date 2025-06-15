@@ -1,6 +1,7 @@
 
 import React, { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
+import { Sun, Moon } from 'lucide-react';
 
 export const ThemeToggle = () => {
   const [theme, setTheme] = useState<'light' | 'dark'>('dark');
@@ -30,7 +31,7 @@ export const ThemeToggle = () => {
       onClick={toggleTheme}
       className="rounded-xl bg-background/80 backdrop-blur-sm border-emerald-500/20 hover:border-emerald-500/40 hover:bg-emerald-500/10"
     >
-      {theme === 'dark' ? '☀️' : '🌙'}
+      {theme === 'dark' ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
     </Button>
   );
 };

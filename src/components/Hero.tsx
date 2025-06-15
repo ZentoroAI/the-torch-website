@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Button } from '@/components/ui/button';
-import { ArrowDown } from 'lucide-react';
+import { ArrowDown, Zap, Globe, DollarSign } from 'lucide-react';
 
 export const Hero = () => {
   return (
@@ -11,7 +11,7 @@ export const Hero = () => {
       <div className="container mx-auto px-4 text-center relative z-10">
         <div className="max-w-5xl mx-auto space-y-10 animate-fade-in">
           <div className="inline-flex items-center space-x-2 bg-emerald-500/10 border border-emerald-500/20 rounded-full px-6 py-3 text-emerald-400 text-sm font-medium backdrop-blur-sm">
-            <span>🔥</span>
+            <Zap className="h-4 w-4" />
             <span>Free & Open Global Community</span>
           </div>
           
@@ -40,7 +40,8 @@ export const Hero = () => {
               className="bg-emerald-600 hover:bg-emerald-700 text-white px-10 py-4 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 border-0"
               onClick={() => window.open('https://discord.gg/NucXxTb9H3', '_blank')}
             >
-              🚀 Join Discord Community
+              <Zap className="mr-2 h-5 w-5" />
+              Join Discord Community
             </Button>
             
             <Button 
@@ -60,11 +61,11 @@ export const Hero = () => {
               <span className="text-muted-foreground">Live Discord Community</span>
             </div>
             <div className="flex items-center justify-center space-x-3 p-4 rounded-lg bg-emerald-500/5 border border-emerald-500/10">
-              <div className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></div>
+              <Globe className="h-4 w-4 text-emerald-500" />
               <span className="text-muted-foreground">Global Network</span>
             </div>
             <div className="flex items-center justify-center space-x-3 p-4 rounded-lg bg-emerald-500/5 border border-emerald-500/10">
-              <div className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></div>
+              <DollarSign className="h-4 w-4 text-emerald-500" />
               <span className="text-muted-foreground">100% Free</span>
             </div>
           </div>

@@ -2,7 +2,7 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
-import { Github } from 'lucide-react';
+import { Github, Zap } from 'lucide-react';
 
 export const CTA = () => {
   return (
@@ -10,7 +10,9 @@ export const CTA = () => {
       <div className="container mx-auto px-4">
         <Card className="max-w-5xl mx-auto bg-background/80 backdrop-blur-sm border-emerald-500/20 p-12 md:p-16 text-center shadow-2xl">
           <div className="space-y-8">
-            <div className="text-6xl mb-6">🔥</div>
+            <div className="p-4 bg-emerald-500/10 rounded-full w-fit mx-auto">
+              <Zap className="h-12 w-12 text-emerald-500" />
+            </div>
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               Ready to Join <span className="text-emerald-500">The Torch</span>?
             </h2>
@@ -25,7 +27,8 @@ export const CTA = () => {
                 className="bg-emerald-600 hover:bg-emerald-700 text-white px-10 py-4 text-xl font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 border-0"
                 onClick={() => window.open('https://discord.gg/NucXxTb9H3', '_blank')}
               >
-                🚀 Join Discord Community
+                <Zap className="mr-2 h-5 w-5" />
+                Join Discord Community
               </Button>
               
               <Button 

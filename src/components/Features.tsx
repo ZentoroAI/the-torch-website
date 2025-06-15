@@ -1,11 +1,11 @@
 
 import React from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { MessageSquare, Github, BookOpen, CircleUser, Link, ArrowUp } from 'lucide-react';
+import { MessageSquare, Users, Link, ArrowUp, Lightbulb, Target } from 'lucide-react';
 
 const features = [
   {
-    icon: MessageSquare,
+    icon: Lightbulb,
     title: 'Build in Public',
     description: 'Share your journey, get feedback, and learn from other founders building their startups openly.',
     channel: '#build-in-public'
@@ -17,7 +17,7 @@ const features = [
     channel: '#ask-the-torch'
   },
   {
-    icon: CircleUser,
+    icon: Users,
     title: 'Co-founder Hiring',
     description: 'Find your perfect co-founder or join an exciting startup as a founding team member.',
     channel: '#cofounder-hirings'
@@ -35,7 +35,7 @@ const features = [
     channel: '#funding-insights'
   },
   {
-    icon: MessageSquare,
+    icon: Target,
     title: 'Product Feedback',
     description: 'Get valuable feedback on your products from real users and fellow entrepreneurs.',
     channel: '#product-feedback'
@@ -48,7 +48,7 @@ export const Features = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-20">
           <div className="inline-flex items-center space-x-2 bg-emerald-500/10 border border-emerald-500/20 rounded-full px-6 py-3 text-emerald-400 text-sm font-medium mb-6 backdrop-blur-sm">
-            <span>🌟</span>
+            <Target className="h-4 w-4" />
             <span>Community Features</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold mb-6">

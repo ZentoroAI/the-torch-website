@@ -1,25 +1,26 @@
 
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
+import { MessageCircle, User, Rocket } from 'lucide-react';
 
 const testimonials = [
   {
     name: 'Ryan',
     role: 'Founder at Zentoro',
     content: 'I thought of starting it because when I am building my startup Zentoro, I felt the need for some free open global community where founders could truly connect and grow together.',
-    avatar: '👨‍💼'
+    icon: User
   },
   {
     name: 'Ronit',
     role: 'Co-founder at Zentoro',
     content: 'Building Zentoro made me realize how important it is to have a supportive community. The Torch fills that gap perfectly - it\'s where real founders come to share, learn, and collaborate.',
-    avatar: '👨‍💻'
+    icon: User
   },
   {
     name: 'Parv',
     role: 'Core Member at Zentoro',
     content: 'As someone deeply involved in the startup ecosystem, I can say The Torch is unlike any other community. It\'s authentic, supportive, and focused on real growth rather than just networking.',
-    avatar: '🚀'
+    icon: Rocket
   }
 ];
 
@@ -29,7 +30,7 @@ export const Testimonials = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-20">
           <div className="inline-flex items-center space-x-2 bg-emerald-500/10 border border-emerald-500/20 rounded-full px-6 py-3 text-emerald-400 text-sm font-medium mb-6 backdrop-blur-sm">
-            <span>💬</span>
+            <MessageCircle className="h-4 w-4" />
             <span>From Our Team</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
@@ -49,7 +50,9 @@ export const Testimonials = () => {
             >
               <CardContent className="p-8">
                 <div className="flex items-center space-x-4 mb-6">
-                  <div className="text-3xl">{testimonial.avatar}</div>
+                  <div className="p-2 bg-emerald-500/10 rounded-full">
+                    <testimonial.icon className="h-6 w-6 text-emerald-500" />
+                  </div>
                   <div>
                     <div className="font-semibold text-foreground text-lg">{testimonial.name}</div>
                     <div className="text-emerald-500 font-medium">{testimonial.role}</div>

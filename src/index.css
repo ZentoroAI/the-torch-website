@@ -10,20 +10,20 @@
     --background: 0 0% 98%;
     --foreground: 0 0% 3%;
 
-    --card: 0 0% 95%;
+    --card: 0 0% 100%;
     --card-foreground: 0 0% 3%;
 
-    --popover: 0 0% 95%;
+    --popover: 0 0% 100%;
     --popover-foreground: 0 0% 3%;
 
     --primary: 142 76% 36%;
     --primary-foreground: 0 0% 98%;
 
-    --secondary: 0 0% 92%;
+    --secondary: 0 0% 96%;
     --secondary-foreground: 0 0% 3%;
 
-    --muted: 0 0% 92%;
-    --muted-foreground: 0 0% 35%;
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
 
     --accent: 142 76% 36%;
     --accent-foreground: 0 0% 98%;
@@ -41,7 +41,7 @@
     --sidebar-foreground: 0 0% 3%;
     --sidebar-primary: 142 76% 36%;
     --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 0 0% 92%;
+    --sidebar-accent: 0 0% 96%;
     --sidebar-accent-foreground: 0 0% 3%;
     --sidebar-border: 0 0% 88%;
     --sidebar-ring: 142 76% 36%;
@@ -118,5 +118,12 @@
       linear-gradient(rgba(34, 197, 94, 0.1) 1px, transparent 1px),
       linear-gradient(90deg, rgba(34, 197, 94, 0.1) 1px, transparent 1px);
     background-size: 50px 50px;
+  }
+
+  /* Light theme specific styles */
+  .light .futuristic-grid {
+    background-image: 
+      linear-gradient(rgba(34, 197, 94, 0.15) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(34, 197, 94, 0.15) 1px, transparent 1px);
   }
 }

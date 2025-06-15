@@ -26,7 +26,7 @@ const testimonials = [
 
 export const Testimonials = () => {
   return (
-    <section className="py-24 bg-black relative overflow-hidden futuristic-grid">
+    <section className="py-24 bg-background relative overflow-hidden futuristic-grid">
       <div className="absolute inset-0 bg-gradient-to-br from-green-500/5 via-transparent to-green-500/10"></div>
       
       <div className="container mx-auto px-4 relative z-10">
@@ -35,10 +35,10 @@ export const Testimonials = () => {
             <MessageCircle className="h-4 w-4" />
             <span>From Our Team</span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white via-green-400 to-white bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-foreground via-green-400 to-foreground bg-clip-text text-transparent">
             Why We Built <span className="text-green-500">The Torch</span>
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Hear from the Zentoro team about the vision behind this community
           </p>
         </div>
@@ -47,7 +47,7 @@ export const Testimonials = () => {
           {testimonials.map((testimonial, index) => (
             <Card 
               key={testimonial.name}
-              className="bg-black/80 backdrop-blur-sm border-green-500/30 hover:border-green-500/60 transition-all duration-300 hover:scale-105 glow-green hover:glow-green-strong"
+              className="bg-card/80 backdrop-blur-sm border-green-500/30 hover:border-green-500/60 transition-all duration-300 hover:scale-105 glow-green hover:glow-green-strong"
               style={{ animationDelay: `${index * 200}ms` }}
             >
               <CardContent className="p-8">
@@ -56,11 +56,11 @@ export const Testimonials = () => {
                     <testimonial.icon className="h-6 w-6 text-green-500" />
                   </div>
                   <div>
-                    <div className="font-semibold text-white text-lg">{testimonial.name}</div>
+                    <div className="font-semibold text-foreground text-lg">{testimonial.name}</div>
                     <div className="text-green-400 font-medium">{testimonial.role}</div>
                   </div>
                 </div>
-                <p className="text-gray-300 leading-relaxed italic text-base">
+                <p className="text-muted-foreground leading-relaxed italic text-base">
                   "{testimonial.content}"
                 </p>
               </CardContent>

@@ -44,7 +44,7 @@ const features = [
 
 export const Features = () => {
   return (
-    <section id="features" className="py-24 bg-black relative overflow-hidden futuristic-grid">
+    <section id="features" className="py-24 bg-background relative overflow-hidden futuristic-grid">
       <div className="absolute inset-0 bg-gradient-to-br from-green-500/5 via-transparent to-green-500/10"></div>
       
       <div className="container mx-auto px-4 relative z-10">
@@ -53,10 +53,10 @@ export const Features = () => {
             <Target className="h-4 w-4" />
             <span>Community Features</span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white via-green-400 to-white bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-foreground via-green-400 to-foreground bg-clip-text text-transparent">
             Everything You Need to <span className="text-green-500">Grow</span>
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             All channels are managed openly by every founder in the community. 
             It's about loyalty, respect, and real growth.
           </p>
@@ -66,7 +66,7 @@ export const Features = () => {
           {features.map((feature, index) => (
             <Card 
               key={feature.title} 
-              className="group hover:shadow-xl transition-all duration-300 hover:scale-105 bg-black/80 backdrop-blur-sm border-green-500/30 hover:border-green-500/60 overflow-hidden glow-green hover:glow-green-strong"
+              className="group hover:shadow-xl transition-all duration-300 hover:scale-105 bg-card/80 backdrop-blur-sm border-green-500/30 hover:border-green-500/60 overflow-hidden glow-green hover:glow-green-strong"
               style={{ animationDelay: `${index * 100}ms` }}
             >
               <CardHeader className="pb-4">
@@ -78,12 +78,12 @@ export const Features = () => {
                     {feature.channel}
                   </div>
                 </div>
-                <CardTitle className="text-xl text-white group-hover:text-green-400 transition-colors">
+                <CardTitle className="text-xl text-foreground group-hover:text-green-400 transition-colors">
                   {feature.title}
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <CardDescription className="text-gray-300 leading-relaxed text-base">
+                <CardDescription className="text-muted-foreground leading-relaxed text-base">
                   {feature.description}
                 </CardDescription>
               </CardContent>
@@ -94,7 +94,7 @@ export const Features = () => {
         <div className="text-center mt-16">
           <div className="inline-flex items-center space-x-2 bg-green-500/5 border border-green-500/30 rounded-xl px-6 py-4 border-glow">
             <span className="text-green-500 font-semibold">Only serious startup minds invited.</span>
-            <span className="text-gray-300">Join a community that values quality over quantity.</span>
+            <span className="text-muted-foreground">Join a community that values quality over quantity.</span>
           </div>
         </div>
       </div>

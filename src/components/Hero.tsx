@@ -55,7 +55,7 @@ export const Hero = () => {
             </Button>
           </div>
           
-          <div className="pt-8 grid grid-cols-1 md:grid-cols-3 gap-6 max-w-2xl mx-auto text-sm">
+          <div className="pt-12 grid grid-cols-1 md:grid-cols-3 gap-6 max-w-2xl mx-auto text-sm">
             <div className="flex items-center justify-center space-x-3 p-4 rounded-lg bg-green-500/5 border border-green-500/20 border-glow">
               <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse glow-green"></div>
               <span className="text-gray-300">Live Discord Community</span>

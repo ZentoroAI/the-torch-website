@@ -24,9 +24,9 @@ export const Stats = () => {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          animateCount(100, 'members');
+          animateCount(50, 'members');
           animateCount(8, 'channels', 1500);
-          animateCount(15, 'countries', 1800);
+          animateCount(5, 'countries', 1800);
         }
       });
     });

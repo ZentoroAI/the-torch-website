@@ -8,43 +8,43 @@
 @layer base {
   :root {
     --background: 0 0% 98%;
-    --foreground: 0 0% 3%;
+    --foreground: 0 0% 8%;
 
     --card: 0 0% 100%;
-    --card-foreground: 0 0% 3%;
+    --card-foreground: 0 0% 8%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 3%;
+    --popover-foreground: 0 0% 8%;
 
-    --primary: 142 76% 36%;
+    --primary: 142 84% 25%;
     --primary-foreground: 0 0% 98%;
 
-    --secondary: 0 0% 96%;
-    --secondary-foreground: 0 0% 3%;
+    --secondary: 0 0% 94%;
+    --secondary-foreground: 0 0% 8%;
 
-    --muted: 0 0% 96%;
-    --muted-foreground: 0 0% 45%;
+    --muted: 0 0% 94%;
+    --muted-foreground: 0 0% 35%;
 
-    --accent: 142 76% 36%;
+    --accent: 142 84% 25%;
     --accent-foreground: 0 0% 98%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 0 0% 88%;
-    --input: 0 0% 88%;
-    --ring: 142 76% 36%;
+    --border: 0 0% 85%;
+    --input: 0 0% 85%;
+    --ring: 142 84% 25%;
 
     --radius: 0.75rem;
 
     --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 0 0% 3%;
-    --sidebar-primary: 142 76% 36%;
+    --sidebar-foreground: 0 0% 8%;
+    --sidebar-primary: 142 84% 25%;
     --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 0 0% 96%;
-    --sidebar-accent-foreground: 0 0% 3%;
-    --sidebar-border: 0 0% 88%;
-    --sidebar-ring: 142 76% 36%;
+    --sidebar-accent: 0 0% 94%;
+    --sidebar-accent-foreground: 0 0% 8%;
+    --sidebar-border: 0 0% 85%;
+    --sidebar-ring: 142 84% 25%;
   }
 
   .dark {
@@ -123,7 +123,62 @@
   /* Light theme specific styles */
   .light .futuristic-grid {
     background-image: 
-      linear-gradient(rgba(34, 197, 94, 0.15) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(34, 197, 94, 0.15) 1px, transparent 1px);
+      linear-gradient(rgba(22, 101, 52, 0.2) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(22, 101, 52, 0.2) 1px, transparent 1px);
+  }
+
+  /* Light theme green colors */
+  .light .text-green-500 {
+    color: rgb(22, 101, 52) !important;
+  }
+
+  .light .text-green-400 {
+    color: rgb(21, 128, 61) !important;
+  }
+
+  .light .bg-green-500 {
+    background-color: rgb(22, 101, 52) !important;
+  }
+
+  .light .hover\:bg-green-600:hover {
+    background-color: rgb(20, 83, 45) !important;
+  }
+
+  .light .border-green-500 {
+    border-color: rgb(22, 101, 52) !important;
+  }
+
+  .light .border-green-500\/50 {
+    border-color: rgba(22, 101, 52, 0.5) !important;
+  }
+
+  .light .border-green-500\/30 {
+    border-color: rgba(22, 101, 52, 0.3) !important;
+  }
+
+  .light .border-green-500\/20 {
+    border-color: rgba(22, 101, 52, 0.2) !important;
+  }
+
+  .light .bg-green-500\/10 {
+    background-color: rgba(22, 101, 52, 0.1) !important;
+  }
+
+  .light .bg-green-500\/5 {
+    background-color: rgba(22, 101, 52, 0.05) !important;
+  }
+
+  /* Light theme glow effects with dark green */
+  .light .glow-green {
+    box-shadow: 0 0 20px rgba(22, 101, 52, 0.2);
+  }
+  
+  .light .glow-green-strong {
+    box-shadow: 0 0 30px rgba(22, 101, 52, 0.3);
+  }
+  
+  .light .border-glow {
+    border: 1px solid rgba(22, 101, 52, 0.3);
+    box-shadow: 0 0 10px rgba(22, 101, 52, 0.1);
   }
 }

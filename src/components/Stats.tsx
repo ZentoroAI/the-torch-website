@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { Card } from '@/components/ui/card';
 
 export const Stats = () => {
-  const [counts, setCounts] = useState({ members: 0, channels: 0, countries: 0 });
+  const [counts, setCounts] = useState({ members: 0, channels: 0, countries: 0, bots: 0 });
 
   useEffect(() => {
     const animateCount = (target: number, key: string, duration: number = 2000) => {
@@ -27,6 +27,7 @@ export const Stats = () => {
           animateCount(50, 'members');
           animateCount(8, 'channels', 1500);
           animateCount(5, 'countries', 1800);
+          animateCount(7, 'bots', 2200);
         }
       });
     });
@@ -49,7 +50,7 @@ export const Stats = () => {
           <p className="text-lg text-muted-foreground">A global, open, and free community for startup-minded builders</p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
           <Card className="p-8 text-center bg-card/80 backdrop-blur-sm border-green-500/30 hover:border-green-500/60 transition-all duration-300 hover:scale-105 glow-green hover:glow-green-strong">
             <div className="text-4xl md:text-5xl font-bold text-green-500 mb-3 filter drop-shadow-[0_0_10px_rgba(34,197,94,0.5)]">
               {counts.members}+
@@ -72,6 +73,14 @@ export const Stats = () => {
             </div>
             <div className="text-foreground font-semibold text-lg mb-1">Countries</div>
             <div className="text-sm text-muted-foreground">Global reach</div>
+          </Card>
+          
+          <Card className="p-8 text-center bg-card/80 backdrop-blur-sm border-green-500/30 hover:border-green-500/60 transition-all duration-300 hover:scale-105 glow-green hover:glow-green-strong">
+            <div className="text-4xl md:text-5xl font-bold text-green-500 mb-3 filter drop-shadow-[0_0_10px_rgba(34,197,94,0.5)]">
+              {counts.bots}
+            </div>
+            <div className="text-foreground font-semibold text-lg mb-1">Community Bots</div>
+            <div className="text-sm text-muted-foreground">Automated support</div>
           </Card>
         </div>
       </div>

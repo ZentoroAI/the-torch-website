@@ -44,17 +44,19 @@ const features = [
 
 export const Features = () => {
   return (
-    <section id="features" className="py-24 bg-background">
-      <div className="container mx-auto px-4">
+    <section id="features" className="py-24 bg-black relative overflow-hidden futuristic-grid">
+      <div className="absolute inset-0 bg-gradient-to-br from-green-500/5 via-transparent to-green-500/10"></div>
+      
+      <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-20">
-          <div className="inline-flex items-center space-x-2 bg-emerald-500/10 border border-emerald-500/20 rounded-full px-6 py-3 text-emerald-400 text-sm font-medium mb-6 backdrop-blur-sm">
+          <div className="inline-flex items-center space-x-2 bg-green-500/10 border border-green-500/30 rounded-full px-6 py-3 text-green-400 text-sm font-medium mb-6 backdrop-blur-sm border-glow">
             <Target className="h-4 w-4" />
             <span>Community Features</span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Everything You Need to <span className="text-emerald-500">Grow</span>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white via-green-400 to-white bg-clip-text text-transparent">
+            Everything You Need to <span className="text-green-500">Grow</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
             All channels are managed openly by every founder in the community. 
             It's about loyalty, respect, and real growth.
           </p>
@@ -64,24 +66,24 @@ export const Features = () => {
           {features.map((feature, index) => (
             <Card 
               key={feature.title} 
-              className="group hover:shadow-xl transition-all duration-300 hover:scale-105 bg-background/80 backdrop-blur-sm border-emerald-500/20 hover:border-emerald-500/40 overflow-hidden"
+              className="group hover:shadow-xl transition-all duration-300 hover:scale-105 bg-black/80 backdrop-blur-sm border-green-500/30 hover:border-green-500/60 overflow-hidden glow-green hover:glow-green-strong"
               style={{ animationDelay: `${index * 100}ms` }}
             >
               <CardHeader className="pb-4">
                 <div className="flex items-center justify-between mb-4">
-                  <div className="p-3 bg-emerald-500/10 rounded-xl group-hover:bg-emerald-500/20 transition-colors">
-                    <feature.icon className="h-6 w-6 text-emerald-500" />
+                  <div className="p-3 bg-green-500/10 rounded-xl group-hover:bg-green-500/20 transition-colors border border-green-500/20 glow-green">
+                    <feature.icon className="h-6 w-6 text-green-500" />
                   </div>
-                  <div className="text-xs text-emerald-400 font-mono bg-emerald-500/10 px-3 py-1 rounded-full border border-emerald-500/20">
+                  <div className="text-xs text-green-400 font-mono bg-green-500/10 px-3 py-1 rounded-full border border-green-500/30 border-glow">
                     {feature.channel}
                   </div>
                 </div>
-                <CardTitle className="text-xl group-hover:text-emerald-400 transition-colors">
+                <CardTitle className="text-xl text-white group-hover:text-green-400 transition-colors">
                   {feature.title}
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <CardDescription className="text-muted-foreground leading-relaxed text-base">
+                <CardDescription className="text-gray-300 leading-relaxed text-base">
                   {feature.description}
                 </CardDescription>
               </CardContent>
@@ -90,9 +92,9 @@ export const Features = () => {
         </div>
         
         <div className="text-center mt-16">
-          <div className="inline-flex items-center space-x-2 bg-emerald-500/5 border border-emerald-500/20 rounded-xl px-6 py-4">
-            <span className="text-emerald-500 font-semibold">Only serious startup minds invited.</span>
-            <span className="text-muted-foreground">Join a community that values quality over quantity.</span>
+          <div className="inline-flex items-center space-x-2 bg-green-500/5 border border-green-500/30 rounded-xl px-6 py-4 border-glow">
+            <span className="text-green-500 font-semibold">Only serious startup minds invited.</span>
+            <span className="text-gray-300">Join a community that values quality over quantity.</span>
           </div>
         </div>
       </div>

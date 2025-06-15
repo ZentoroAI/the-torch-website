@@ -5,7 +5,7 @@ import { ArrowDown, Zap, Globe, DollarSign } from 'lucide-react';
 
 export const Hero = () => {
   return (
-    <section className="min-h-screen flex items-center justify-center bg-black relative overflow-hidden futuristic-grid">
+    <section className="min-h-screen flex items-center justify-center bg-background relative overflow-hidden futuristic-grid">
       <div className="absolute inset-0 bg-gradient-to-br from-green-500/5 via-transparent to-green-500/10"></div>
       
       <div className="container mx-auto px-4 text-center relative z-10">
@@ -24,12 +24,12 @@ export const Hero = () => {
               />
             </div>
             
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-white via-green-400 to-white bg-clip-text text-transparent leading-tight">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-foreground via-green-400 to-foreground bg-clip-text text-transparent leading-tight">
               Join The Movement
             </h1>
           </div>
           
-          <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed font-light">
+          <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed font-light">
             A global Discord community for founders, builders, and startup-minded people. 
             Build in public, collaborate, and grow together in our free, open ecosystem.
           </p>
@@ -58,15 +58,15 @@ export const Hero = () => {
           <div className="pt-12 grid grid-cols-1 md:grid-cols-3 gap-6 max-w-2xl mx-auto text-sm">
             <div className="flex items-center justify-center space-x-3 p-4 rounded-lg bg-green-500/5 border border-green-500/20 border-glow">
               <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse glow-green"></div>
-              <span className="text-gray-300">Live Discord Community</span>
+              <span className="text-muted-foreground">Live Discord Community</span>
             </div>
             <div className="flex items-center justify-center space-x-3 p-4 rounded-lg bg-green-500/5 border border-green-500/20 border-glow">
               <Globe className="h-4 w-4 text-green-500" />
-              <span className="text-gray-300">Global Network</span>
+              <span className="text-muted-foreground">Global Network</span>
             </div>
             <div className="flex items-center justify-center space-x-3 p-4 rounded-lg bg-green-500/5 border border-green-500/20 border-glow">
               <DollarSign className="h-4 w-4 text-green-500" />
-              <span className="text-gray-300">100% Free</span>
+              <span className="text-muted-foreground">100% Free</span>
             </div>
           </div>
         </div>

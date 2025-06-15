@@ -9,7 +9,7 @@ export const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-black/90 backdrop-blur-xl border-b border-green-500/20">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-xl border-b border-green-500/20">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
@@ -18,26 +18,26 @@ export const Navbar = () => {
               <Zap className="h-5 w-5 text-black" />
             </div>
             <div className="flex items-center space-x-2">
-              <span className="text-xl font-bold text-white">The Torch</span>
+              <span className="text-xl font-bold text-foreground">The Torch</span>
               <span className="text-sm text-green-400">by Zentoro</span>
             </div>
           </div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            <a href="#home" className="text-white hover:text-green-400 transition-all duration-300 font-medium relative group">
+            <a href="#home" className="text-foreground hover:text-green-400 transition-all duration-300 font-medium relative group">
               Home
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-green-400 transition-all duration-300 group-hover:w-full"></span>
             </a>
-            <a href="#features" className="text-white hover:text-green-400 transition-all duration-300 font-medium relative group">
+            <a href="#features" className="text-foreground hover:text-green-400 transition-all duration-300 font-medium relative group">
               Features
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-green-400 transition-all duration-300 group-hover:w-full"></span>
             </a>
-            <a href="#community" className="text-white hover:text-green-400 transition-all duration-300 font-medium relative group">
+            <a href="#community" className="text-foreground hover:text-green-400 transition-all duration-300 font-medium relative group">
               Community
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-green-400 transition-all duration-300 group-hover:w-full"></span>
             </a>
-            <a href="#about" className="text-white hover:text-green-400 transition-all duration-300 font-medium relative group">
+            <a href="#about" className="text-foreground hover:text-green-400 transition-all duration-300 font-medium relative group">
               About
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-green-400 transition-all duration-300 group-hover:w-full"></span>
             </a>
@@ -62,7 +62,7 @@ export const Navbar = () => {
               variant="ghost"
               size="icon"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-white hover:text-green-400 hover:bg-green-500/10"
+              className="text-foreground hover:text-green-400 hover:bg-green-500/10"
             >
               {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
             </Button>
@@ -71,32 +71,32 @@ export const Navbar = () => {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="md:hidden border-t border-green-500/20 bg-black/95 backdrop-blur-xl">
+          <div className="md:hidden border-t border-green-500/20 bg-background/95 backdrop-blur-xl">
             <div className="px-4 py-6 space-y-4">
               <a 
                 href="#home" 
-                className="block text-white hover:text-green-400 transition-colors font-medium py-2"
+                className="block text-foreground hover:text-green-400 transition-colors font-medium py-2"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Home
               </a>
               <a 
                 href="#features" 
-                className="block text-white hover:text-green-400 transition-colors font-medium py-2"
+                className="block text-foreground hover:text-green-400 transition-colors font-medium py-2"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Features
               </a>
               <a 
                 href="#community" 
-                className="block text-white hover:text-green-400 transition-colors font-medium py-2"
+                className="block text-foreground hover:text-green-400 transition-colors font-medium py-2"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Community
               </a>
               <a 
                 href="#about" 
-                className="block text-white hover:text-green-400 transition-colors font-medium py-2"
+                className="block text-foreground hover:text-green-400 transition-colors font-medium py-2"
                 onClick={() => setIsMenuOpen(false)}
               >
                 About
